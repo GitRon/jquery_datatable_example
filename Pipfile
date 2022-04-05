@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+# django
+Django = "==3.2.*"                      # django!
+# Frontend dependencies
+django-webpack-loader = "==1.4.*"       # django integration for webpack
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

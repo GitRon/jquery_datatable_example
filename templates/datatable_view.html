@@ -1,0 +1,50 @@
+{% load render_bundle from webpack_loader %}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+    <title>jQuery Datatable Test</title>
+
+    <!-- CSS -->
+    {% render_bundle 'main' 'css' %}
+
+    <!-- JS -->
+    {% render_bundle 'main' 'js' %}
+</head>
+<body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.data-table').DataTable({
+            "iDisplayLength": 50,
+            "bStateSave": false,
+            "aaSorting": [[0, 'asc']],
+            "aoColumns": [
+                null,
+                null,
+            ]
+        })
+    });
+</script>
+<div class="container mt-5">
+    <table class="table data-table">
+        <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Test A</td>
+            <td>Test B</td>
+        </tr>
+        <tr>
+            <td>Test C</td>
+            <td>Test D</td>
+        </tr>
+        </tbody>
+        <tr></tr>
+    </table>
+</div>
+</body>
+</html>
